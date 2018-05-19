@@ -1,0 +1,47 @@
+Str #text = "Podaj a, b i c wzoru ax^2+bx+c=0";
+Print(#text);
+Flt #a;
+Flt #b;
+Flt #c;
+Read(#a);
+Read(#b);
+Read(#c);
+Flt #delta;
+#delta = #b*#b-4*#a*#c;
+Str #deltatext = "Delta wynosi";
+Print(#deltatext);
+Print(#delta);
+If(#delta<0){
+	Str #outputerror = "Brak rzeczywistych rozwiazan";
+	Print(#outputerror);
+} Else {
+	If(#delta > 0){
+		Flt #sqrt;
+		#sqrt = #delta;
+		Int #iterator;
+		#iterator = 0;
+		While(#iterator < 10){
+			#iterator = #iterator + 1;
+			#sqrt = (#sqrt + (#delta/#sqrt));
+			#sqrt = #sqrt / 2.0;
+		};
+		Str #outputsqrt = "Pierwiastek z delty wynosi";
+		Print(#outputsqrt);
+		Print(#sqrt);
+		Flt #x1;
+		Flt #x2;	
+		#x1 = (0 - #b - #sqrt)/(2*#a);
+		#x2 = (0 - #b + #sqrt)/(2*#a);
+		Str #outputx1x2 = "Pierwiastki x1 i x2 to";
+		Print(#outputx1x2);
+		Print(#x1);
+		Print(#x2);
+	} Else {
+		Flt #x;
+		#x = (0-#b)/(2*#a);
+		Str #outputx1 = "Pierwiastek to";
+		Print(#outputx1);
+		Print(#x);
+	};
+};
+	

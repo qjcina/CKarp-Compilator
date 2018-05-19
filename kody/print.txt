@@ -1,0 +1,5 @@
+Int #a;
+Flt #b;
+Read(#a);
+Read(#b);
+Print(#a+#b);

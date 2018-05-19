@@ -1,0 +1,20 @@
+Int #a;
+Int #b;
+Int #c;
+Str #true = "prawda";
+Str #false = "falsz";
+#a=2;
+#b=3;
+#c=4;
+If(#a > 1){
+	Print(#true);
+	If(#a<1){
+		Print(#false);
+	} Else {
+		Print(#true);
+		If(#c>#b){
+			Print(#true);
+		};
+	};
+};
+

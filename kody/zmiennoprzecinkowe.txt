@@ -1,0 +1,6 @@
+Flt #x;
+Flt #f;
+#x = 1.5;
+#f = 3 + #x;
+Printf(#f);
+Printi(3);

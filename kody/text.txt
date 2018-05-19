@@ -1,0 +1,4 @@
+Str #text = "tekst";
+While(1<2){
+	Print(#text);
+};
