@@ -236,7 +236,7 @@ namespace asembler{
 		stringstream ss;
 		ss<<"l"<<determineAction(valueType, value)<<" $t0,"<<value<<"\n";
 		ss<<"la $t4, "<<table<<"\n";
-		ss<<"li $t5, "<<position<<"\n";
+		ss<<"l"<<determineAction("int", position)<<" $t5, "<<position<<"\n";
 		ss<<"mul $t5, $t5, 4\n";
 		ss<<"add $t4, $t4, $t5\n";
 		ss<<"sw $t0, ($t4)\n";
@@ -246,7 +246,7 @@ namespace asembler{
 		stringstream ss;
 		ss<<"#wyciaganie z tablicy{\n";
 		ss<<"la $t4, "<<table<<"\n";
-		ss<<"li $t5, "<<position<<"\n";
+		ss<<"l"<<determineAction("int", position)<<" $t5, "<<position<<"\n";
 		ss<<"mul $t5, $t5, 4\n";
 		ss<<"add $t4, $t4, $t5\n";
 		ss<<"lw $t0, ( $t4 )\n";
